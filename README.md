@@ -2,7 +2,6 @@
 
 It is a web-based application designed to enhance the early detection and forecasting of malaria parasites using deep learning techniques. This application allows users to upload blood smear slide images for analysis and provides insights into malaria detection.
 
-## <a href="https://youtu.be/ByZQDdGRP5o?si=XI9bMaJZ8Y46rS9O">Project Demo</a>
 
 ## Features
 
@@ -22,8 +21,3 @@ It is a web-based application designed to enhance the early detection and foreca
   <li>i18Next</li>
 </ul>
 
-## Project Contributors
-<ul>
-  <li>Aditya Vardhan Agarwal</li>
-  <li>Aryan Adlakha</li>
-</ul>
