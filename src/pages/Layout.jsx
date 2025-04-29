@@ -32,15 +32,19 @@ const Layout = () => {
   return (
     <>
       {loading ? (
-        <div className="flex flex-col items-center justify-center h-screen w-full">
+        <div className="flex flex-col items-center justify-center h-screen w-full bg-green-100">
           <Lottie animationData={UI} loop={true} className="h-[300px] w-[300px]" />
           <Box sx={{ width: '20%', marginTop: '20px' }}>
-            <LinearProgress variant="determinate" value={progress} sx={{ borderRadius: '10px', height: '10px' }} />
+            <LinearProgress
+              variant="determinate"
+              value={progress}
+              sx={{ borderRadius: '10px', height: '10px' }}
+            />
           </Box>
-          <div className="text-2xl font-medium mt-4">Loading Web UI</div>
+          <div className="text-2xl font-medium mt-4 text-green-800">Loading Web UI</div>
         </div>
       ) : (
-        <div className="">
+        <div className="bg-green-100">
           <Landing />
           <Features />
           <Prevention />

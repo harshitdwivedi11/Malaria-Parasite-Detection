@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 const Prevention = () => {
     const { t } = useTranslation();
     return(
-<div className="bg-[#f3f4f6] md:px-32 p-16">
+<div className="bg-gradient-to-b from-green-100 to-white md:px-32 p-16"> 
         <div className="text-3xl font-semibold text-center">{t("prevention_title")}</div>
         <div className="grid grid-cols-1 md:grid-cols-3 items-center mt-4 md:space-x-4">
         <Card

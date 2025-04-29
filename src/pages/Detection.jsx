@@ -10,13 +10,14 @@ import { Box, Modal, Typography } from "@mui/material";
 import SheildArt from "../assets/lottie/Sheild.json";
 import InfectedArt from "../assets/lottie/Infected.json";
 import BadRequest from "../assets/images/BadRequest.jpg";
+
 const Detection = () => {
   const [image, setImage] = useState(null);
   const [infected, setInfected] = useState(false);
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState("");
-  const [error, setError] = useState(""); 
+  const [error, setError] = useState("");
   const { t } = useTranslation();
 
   const handleFileChange = (event) => {
@@ -28,7 +29,7 @@ const Detection = () => {
 
   const onPost = async () => {
     setLoading(true);
-    setError(""); 
+    setError("");
     const form_data = new FormData();
     form_data.append("file", image);
     try {
@@ -39,7 +40,6 @@ const Detection = () => {
         },
       });
 
-      
       if (response.status !== 200) {
         throw new Error("Error");
       }
@@ -66,15 +66,15 @@ const Detection = () => {
 
   if (error) {
     return (
-      <div className="flex justify-center items-center h-screen">
-        <img src={BadRequest} height={100} width={700} className="animate-up-down"/>
+      <div className="flex justify-center items-center min-h-screen bg-green-100">
+        <img src={BadRequest} height={100} width={700} className="animate-up-down" />
       </div>
     );
   }
 
   if (!loading) {
     return (
-      <div className="">
+      <div className="bg-green-100 min-h-screen">
         <Navbar />
         <div className="mt-28 text-3xl font-bold text-center">{t("detect_title")}</div>
         <div className="grid grid-cols-1 mx-auto w-1/2 item-center justify-center min-h-screen mt-10 max-lg:w-full max-lg:px-2">
@@ -103,23 +103,26 @@ const Detection = () => {
             <span className="">{t("upload_and_analyse")}</span>
           </button>
         </div>
+
         <Modal
           open={open}
           onClose={() => setOpen(false)}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
-          <Box sx={{
-              width: '300px',
-              bgcolor: 'background.paper',
+          <Box
+            sx={{
+              width: "300px",
+              bgcolor: "background.paper",
               borderRadius: 2,
               boxShadow: 24,
               p: 4,
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)'
-            }}>
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+            }}
+          >
             <Typography id="modal-modal-title" variant="h6" component="h2" align="center">
               {t("prediction_result")}
             </Typography>
@@ -137,7 +140,7 @@ const Detection = () => {
     );
   } else {
     return (
-      <div className="flex justify-center h-screen items-center">
+      <div className="flex justify-center items-center min-h-screen bg-green-100">
         <Lottie animationData={LoadingArt} loop={true} className="h-[100px] w-[100px]" />
       </div>
     );

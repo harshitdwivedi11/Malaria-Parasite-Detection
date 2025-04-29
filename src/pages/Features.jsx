@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 const Features = () => {
     const { t } = useTranslation();
     return (
-        <div className="bg-white md:px-32 p-16">
+        <div className="bg-gradient-to-b from-white to-green-100 md:px-32 p-16">
         <div className="text-3xl font-semibold text-center">{t("features_title")}</div>
         <div className="grid grid-cols-1 md:grid-cols-3 items-center mt-4 md:space-x-4">
         <Card
