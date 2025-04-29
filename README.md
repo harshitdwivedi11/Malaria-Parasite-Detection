@@ -43,5 +43,5 @@ A web-based application for early detection and forecasting of malaria parasites
 
 1. **Clone the repository**  
    ```bash
-   git clone https://github.com/harshitdwivedi11/-Malaria-Parasite-Detection.git
-   cd -Malaria-Parasite-Detection
+   git clone https://github.com/harshitdwivedi11/Malaria-Parasite-Detection.git
+   cd Malaria-Parasite-Detection
