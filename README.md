@@ -4,6 +4,9 @@ A web-based application for early detection and forecasting of malaria parasites
 
 ---
 
+# Preview
+Demo- https://malaria-parasite-detection.vercel.app/
+
 ## 🚀 Features
 
 - **Upload Image**  
